@@ -1,0 +1,24 @@
+<svg width="500" height="400" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="500" height="400" fill="#ffffff"/>
+
+  <!-- Glowing Brain/Circuit Icon -->
+  <g transform="translate(250, 200)">
+    <!-- Brain Outline -->
+    <path d="M 0 -80 C -50 -80, -80 -50, -80 0 C -80 50, -50 80, 0 80 C 50 80, 80 50, 80 0 C 80 -50, 50 -80, 0 -80 Z" fill="none" stroke="#ff6347" stroke-width="4" opacity="0.5"/>
+    
+    <!-- Circuit Lines -->
+    <path d="M 0 -60 V -40 M 0 60 V 40 M -60 0 H -40 M 60 0 H 40" stroke="#2a2a2a" stroke-width="2" opacity="0.8"/>
+    <circle cx="0" cy="0" r="10" fill="#ff6347"/>
+    
+    <!-- Nodes -->
+    <circle cx="-40" cy="-40" r="5" fill="#2a2a2a"/>
+    <circle cx="40" cy="-40" r="5" fill="#2a2a2a"/>
+    <circle cx="-40" cy="40" r="5" fill="#2a2a2a"/>
+    <circle cx="40" cy="40" r="5" fill="#2a2a2a"/>
+    <circle cx="0" cy="-40" r="5" fill="#2a2a2a"/>
+    <circle cx="0" cy="40" r="5" fill="#2a2a2a"/>
+    <circle cx="-40" cy="0" r="5" fill="#2a2a2a"/>
+    <circle cx="40" cy="0" r="5" fill="#2a2a2a"/>
+  </g>
+</svg>
