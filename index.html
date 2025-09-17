@@ -3,80 +3,63 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MoodFood - Find Food that Fits Your Mood</title>
+    <title>EmoInsight</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <header>
-      <nav class="container">
-        <a href="/" class="logo">
-          <img src="assets/images/logo.jpeg" alt="EmoInsight Logo" />
-        </a>
-      </nav>
-    </header>
+    <div id="app-container">
+      <header class="app-header">
+        <h1>EmoInsight</h1>
+        <img
+          src="assets/images/logo.jpeg"
+          alt="Middlesex University Logo"
+          class="logo"
+        />
+      </header>
 
-    <main>
-      <section id="hero" class="container">
-        <div class="hero-text">
-          <h1>Let your mood decide your feast.</h1>
-          <p>
-            Our AI analyzes your mood in a snap and suggests the perfect meal to match your vibe.
-          </p>
-          <a href="#mood-scanner" class="cta-button">Try the Mood Scanner</a>
-        </div>
-        <div class="hero-image">
-          <img
-            src="assets/images/hero-illustration.svg"
-            alt="Illustration of people enjoying food"
-          />
-        </div>
-      </section>
-
-      <section id="mood-scanner" class="container">
-        <h2>What's On Your Mood?</h2>
-        <!-- <p class="section-subtitle">Stop scrolling, start smiling (or frowning)!</p> -->
-        <div id="scanner-box">
-          <div id="camera-container">
-            <video id="camera-feed" autoplay playsinline muted></video>
-            <canvas id="photo-canvas" style="display:none;"></canvas>
-            <p id="guidance-message">Click "Start Camera" to begin.</p>
+      <main class="app-main">
+        <div id="media-container">
+          <video id="camera-feed" class="hidden"></video>
+          <canvas id="photo-canvas" class="hidden"></canvas>
+          <div id="image-placeholder">
+            <i class="fa fa-user-circle"></i>
           </div>
-          <button id="start-camera-btn">Start Camera</button>
-          <button id="scan-mood-btn" class="hidden">Scan My Mood</button>
         </div>
-        <div id="results-container" class="hidden"></div>
-      </section>
 
-      <section id="features" class="container">
-        <div class="feature-image">
-          <img
-            src="assets/images/features-illustration.svg"
-            alt="Illustration of AI and technology"
-          />
+        <!-- Add floating loader -->
+        <div id="analyzing-loader" class="hidden">
+          <div class="loader-content">
+            <div class="spinner"></div>
+            <p>Analyzing your mood...</p>
+          </div>
         </div>
-        <div class="feature-text">
-          <h2>Powered by Advanced AI</h2>
-          <p>
-            Our sophisticated machine learning model understands the subtle
-            nuances of your facial expressions to give you surprisingly accurate
-            and delightful recommendations. Haven't tried it yet? What are you
-            waiting for?
-          </p>
-          <a href="#mood-scanner" class="cta-button">Find Your Flavor</a>
-        </div>
-      </section>
-    </main>
 
-    <footer>
-      <div class="container">
-        <ul class="footer-links">
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-        <p class="copyright">&copy; 2025 MoodFood. All Rights Reserved.</p>
-      </div>
-    </footer>
+        <button id="take-photo-btn" class="btn btn-primary">
+          <i class="fa fa-camera"></i> Take Photo
+        </button>
+
+        <div id="results-container" class="hidden">
+        </div>
+      </main>
+
+      <footer id="app-footer" class="hidden">
+        <nav class="bottom-nav">
+          <a href="#"><i class="fa fa-cog"></i> Settings</a>
+          <a href="#"><i class="fa fa-user"></i> Profile</a>
+          <a href="#"><i class="fa fa-chart-bar"></i> Analytics</a>
+        </nav>
+      </footer>
+    </div>
   </body>
 </html>

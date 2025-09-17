@@ -40,8 +40,6 @@ Please create the following file structure for the project:
 
 _Note: Please use high-quality, playful, and modern illustrations for the hero and features sections. You can use placeholders from services like `undraw.co` if final assets are not available._
 
-## 3\. HTML Structure (`index.html`)
-
 Create the main HTML file with the following semantic structure.
 
 ```html
